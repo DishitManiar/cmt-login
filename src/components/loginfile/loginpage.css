@@ -1,0 +1,160 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #a0c4ff, #8debf8);
+    min-height: 100vh; /* Ensure the gradient covers the entire viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.addUser {
+    width: 400px; 
+    margin: 50px auto; /* Center the form horizontally */
+    background-color: white; /* White background for form */
+    padding: 30px; /* Add padding inside the form */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6); /* Subtle shadow effect */
+    transition: transform 0.3s, box-shadow 0.3s; /* Add transition for hover effect */
+}
+
+.addUser:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.35); /* Intensify shadow on hover */
+}
+
+.addUser h3 {
+    text-align: center; /* Center align heading */
+    font-weight: bold;
+    color: darkblue;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+    margin-bottom: 20px; /* Add spacing below heading */
+}
+
+.addUser .inputGroup {
+    display: flex;
+    flex-direction: column; /* Stack inputs vertically */
+    gap: 15px; /* Add spacing between inputs */
+}
+
+.addUser .inputGroup label {
+    font-weight: bold; /* Make labels bold */
+    text-align: left;
+}
+
+.addUser .inputGroup input {
+    padding: 10px; /* Padding inside input boxes */
+    border: 1px solid #ccc; /* Add border around inputs */
+    border-radius: 4px; /* Rounded corners for inputs */
+    font-size: 14px; /* Increase font size */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth focus effect */
+}
+
+.addUser .inputGroup input:focus {
+    border-color: darkblue; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.3); /* Add glow effect on focus */
+    outline: none; /* Remove default outline */
+}
+
+.addUser .inputGroup .error {
+    color: red;
+    font-size: 12px;
+    animation: fadeIn 0.5s ease-in-out; /* Smooth fade-in effect */
+}
+
+.addUser .inputGroup .success {
+    color: green;
+    font-size: 12px;
+    animation: fadeIn 0.5s ease-in-out; /* Smooth fade-in effect */
+}
+
+.addUser button {
+    padding: 10px 20px; /* Add padding to the button */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    background-color: darkblue; /* Button background */
+    color: white; /* Button text color */
+    font-size: 16px; /* Increase font size */
+    font-weight: bold;
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth hover effects */
+}
+
+.addUser button:hover {
+    background-color: navy; /* Darker background on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.addUser button:active {
+    transform: translateY(1px); /* Pressed effect */
+}
+.show-password {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between checkbox and label */
+    margin-top: 5px; /* Add space between the password input and checkbox */
+    font-size: 14px; /* Font size for better readability */
+    font-weight: normal; /* Normal font weight for label */
+    color: #555; /* Subtle gray color for text */
+}
+
+.show-password input {
+    cursor: pointer; /* Pointer cursor for the checkbox */
+}
+
+.show-password label {
+    cursor: pointer; /* Allow label to toggle checkbox */
+}
+
+
+/* Media queries for responsive design */
+@media (max-width: 992px) {
+    .addUser {
+        padding: 25px; /* Adjust padding for medium screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .addUser {
+        width: 95%; /* Allow the form to take 95% of the screen width */
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .addUser h3 {
+        font-size: 1.5rem; /* Adjust font size for heading */
+    }
+
+    .addUser .inputGroup {
+        gap: 10px; /* Adjust spacing between fields */
+    }
+
+    .addUser .inputGroup input {
+        padding: 10px; /* Keep padding consistent */
+    }
+}
+
+/* Very small screens adjustments */
+@media (max-width: 375px) {
+    .addUser {
+        padding: 15px; /* Further reduce padding */
+    }
+
+    .addUser h3 {
+        font-size: 1.25rem; /* Smaller heading */
+    }
+
+    .addUser .inputGroup {
+        gap: 5px; /* Reduce gap between fields */
+    }
+}
+
+/* Keyframe for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
